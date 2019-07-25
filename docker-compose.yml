@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  goGFG:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gogfg
+    ports:
+      - "8000:8000"
+    environment:
+      - ESPORT=9200
+      - ESHOST=storage
+    depends_on:
+      - storage
+  storage:
+    image: elasticsearch:7.2.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+volumes:
+  esdata:
+
