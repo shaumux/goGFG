@@ -39,5 +39,6 @@ In the current directory
     docker-compose logs -f goGFG
     
 ##***Auth***
+
 Auth Scheme - Basic Auth
 Credentials - Shaumux, secretPassword
