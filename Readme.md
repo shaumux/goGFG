@@ -41,4 +41,5 @@ In the current directory
 ##***Auth***
 
 Auth Scheme - Basic Auth
+
 Credentials - Shaumux, secretPassword
